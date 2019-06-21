@@ -168,6 +168,21 @@ class SiswaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $siswa = siswa::find($id);
+          if (!$siswa) {
+            $response = [
+                'success' =>false,
+                'data' => 'Empty',
+                'massage' =>'siswa tidak di temukan'
+            ];
+            return $response() ->json($response,404);
+        }
+           $siswa->delete();
+             $response = [
+                'success' =>true,
+                'data' => $siswa,
+                'massage' =>'berhasil.'
+            ];
+            return response()->json($response,200);
     }
 }
