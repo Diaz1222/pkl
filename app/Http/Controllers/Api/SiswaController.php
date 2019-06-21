@@ -54,7 +54,7 @@ class SiswaController extends Controller
         //1. tampung semua inputan ke $inputan
           $input = $request->all();
         //2. buat validasi di tampung ke $validator
-        $validator = validator::make($input,[
+        $validator = Validator::make($input,[
             'nama' => 'required' 
         ]);
         //3. cek validasi
