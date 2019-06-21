@@ -52,7 +52,7 @@ class SiswaController extends Controller
     public function store(Request $request)
     {
         //1. tampung semua inputan ke $inputan
-          $input = $required->all();
+          $input = $request->all();
         //2. buat validasi di tampung ke $validator
         $validator = validator::make($input,[
             'nama' => 'required' 
