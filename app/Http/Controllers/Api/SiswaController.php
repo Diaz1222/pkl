@@ -89,21 +89,21 @@ class SiswaController extends Controller
      */
     public function show($id)
     {
-        $siswa = siswa::find($id);
+          $siswa = siswa::find($id);
         if (!$siswa) {
             $response = [
                 'success' =>false,
-                'data' => 'gagal meng show',
+                'data' => 'gagal menampilkan',
                 'massage' =>'siswa tidak di temukan'
             ];
-            return response() ->json($response,404);
+            return response()->json($response,404);
         }
         $response = [
                 'success' =>true,
                 'data' => $siswa,
                 'massage' =>'berhasil menampilkan.'
             ];
-            return response() ->json($response,200);
+            return response()->json($response,200);
     }
 
     /**
