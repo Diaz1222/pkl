@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Validator;
 use App\user;
 use App\Siswa;
-use App\validator;
 use Illuminate\Http\Request;
 class SiswaController extends Controller
 {
@@ -77,7 +77,7 @@ class SiswaController extends Controller
                 'massage' =>'berhasil.'
             ];
             //6.tampilkan berhasil
-            return $response() ->json($response,200);
+            return response() ->json($response,200);
           
     }
 
