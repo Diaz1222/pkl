@@ -96,14 +96,14 @@ class SiswaController extends Controller
                 'data' => 'Empty',
                 'massage' =>'siswa tidak di temukan'
             ];
-            return $response() ->json($response,404);
+            return response() ->json($response,404);
         }
         $response = [
                 'success' =>true,
                 'data' => $siswa,
                 'massage' =>'berhasil.'
             ];
-            return $response() ->json($response,200);
+            return response() ->json($response,200);
     }
 
     /**
@@ -156,7 +156,7 @@ class SiswaController extends Controller
                 'data' => $siswa,
                 'massage' =>'berhasil.'
             ];
-            return $response()->json($response,200);
+            return response()->json($response,200);
 
     }
 
