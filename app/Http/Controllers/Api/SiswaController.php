@@ -172,7 +172,7 @@ class SiswaController extends Controller
           if (!$siswa) {
             $response = [
                 'success' =>false,
-                'data' => 'Empty',
+                'data' => 'gagal hapus',
                 'massage' =>'siswa tidak di temukan'
             ];
             return $response() ->json($response,404);
@@ -181,7 +181,7 @@ class SiswaController extends Controller
              $response = [
                 'success' =>true,
                 'data' => $siswa,
-                'massage' =>'berhasil.'
+                'massage' =>'berhasil. menghapus'
             ];
             return response()->json($response,200);
     }
