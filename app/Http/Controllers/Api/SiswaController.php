@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\user;
 use App\Siswa;
+use App\validator;
 use Illuminate\Http\Request;
 class SiswaController extends Controller
 {
@@ -50,7 +51,34 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //1. tampung semua inputan ke $inputan
+          $input = $required->all();
+        //2. buat validasi di tampung ke $validator
+        $validator = validator::make($input,[
+            'nama' => 'required' 
+        ]);
+        //3. cek validasi
+        if ($validator->fails()) {
+            $response = [
+              'success' =>false,
+                'data' => 'validator error',
+                'massage' =>$validator->error()
+            ];
+            return response()->json($response,500);   
+
+        }
+        //4. buat fungsi untuk menghandle semua inputan ->
+        //dimasukan ke table
+        $siswa = siswa::create($input);
+       //5.menampilkan response
+          $response = [
+                'success' =>true,
+                'data' => $siswa,
+                'massage' =>'berhasil.'
+            ];
+            //6.tampilkan berhasil
+            return $response() ->json($response,200);
+          
     }
 
     /**
