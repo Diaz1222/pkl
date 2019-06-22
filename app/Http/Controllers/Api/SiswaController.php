@@ -154,7 +154,7 @@ class SiswaController extends Controller
         $response = [
                 'success' =>true,
                 'data' => $siswa,
-                'massage' =>'berhasil.'
+                'massage' =>'berhasil merubah.'
             ];
             return response()->json($response,200);
 
