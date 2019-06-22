@@ -18,3 +18,22 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('backend', function () {
+    return view('backend');
+});
+Route::get('index', function () {
+    return view('frontend.index');
+});
+Route::get('about', function () {
+    return view('frontend.about');
+});
+Route::get('categoris', function () {
+    return view('frontend.catagories');
+});
+Route::get('contact', function () {
+    return view('frontend.contact');
+});
+Route::get('singlepost', function () {
+    return view('frontend.singlepost');
+});
