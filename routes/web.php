@@ -28,7 +28,7 @@ Route::get('index', function () {
 Route::get('about', function () {
     return view('frontend.about');
 });
-Route::get('categoris', function () {
+Route::get('catagories', function () {
     return view('frontend.catagories');
 });
 Route::get('contact', function () {
