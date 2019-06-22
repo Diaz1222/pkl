@@ -86,14 +86,14 @@
                                     <li class="active"><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
-                                             <li><a href="{{ url('index') }}">Home</a></li>
+                                             <li><a href="{{ url('/') }}">Home</a></li>
                                             <li><a href="{{url('catagories')}}">Catagories</a></li>
                                             <li><a href="{{url('singlepost')}}">Single Articles</a></li>
                                             <li><a href="{{url('about')}}">About Us</a></li>
                                             <li><a href="{{url('contact')}}">Contact</a></li>
                                             <li><a href="#">Dropdown</a>
                                                 <ul class="dropdown">
-                                                     <li><a href="{{ url('index') }}">Home</a></li>
+                                                     <li><a href="{{ url('/') }}">Home</a></li>
                                             <li><a href="{{url('catagories')}}">Catagories</a></li>
                                             <li><a href="{{url('singlepost')}}">Single Articles</a></li>
                                             <li><a href="{{url('about')}}">About Us</a></li>
